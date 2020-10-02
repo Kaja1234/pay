@@ -1,0 +1,130 @@
+               <div style="text-align: center;">
+               
+               <p class="h4 mb-4">Account Registration Form</p>
+
+              </div>
+
+<form class="col-xl-4 col-md-6 mb-4"  #addform="ngForm"   (ngSubmit)="userRegister(addform.value)">
+
+  
+
+      <div class="form-group" class="">
+   <label for="pwd">Select Account Type:</label>
+
+   <select class="selectpicker form-control" ngModel name="accountType">
+     <option>Savings Account</option>
+     <option>Reoccuring Deposit</option>
+     <option>Fixed Deposit</option>
+    </select>
+      </div>
+      <div class="form-group" class="">
+         <label for="pwd">FirstName:</label>
+         <input type="text" class="form-control" placeholder="FirstName" ngModel name="firstName"#firstNamecontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="firstNamecontrol.touched"> Enter FirstName </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">MiddleName:</label>
+         <input type="text" class="form-control" placeholder="MiddleName" ngModel name="middleName">
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">LastName:</label>
+         <input type="text" class="form-control" placeholder="LastName" ngModel name="lastName"#lastNamecontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="lastNamecontrol.touched"> Enter lastName </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">FatherName:</label>
+         <input type="text" class="form-control" placeholder="FatherName" ngModel name="fatherName"#fatherNamecontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="fatherNamecontrol.touched"> Enter FatherName </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">Date Of Birth:</label>
+         <input type="date" class="form-control" placeholder="DD-MM-YYYY" ngModel name="dob"#dobcontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="dobcontrol.touched"> Enter Date Of Birth </span>
+       </div>
+
+       <div>
+       <label for="pwd">Gender:</label>
+
+      <select class="selectpicker form-control" ngModel name="gender">
+     <option>Male</option>
+     <option>Female</option>
+     <option>Other</option>
+       </select>
+      </div>
+      <div>
+       <label for="pwd">Martial Status:</label>
+
+       <select class="selectpicker form-control" ngModel name="martialStatus">
+      <option>Married</option>
+      <option>Unmarried</option>
+     
+        </select>
+      </div>
+       
+      <div class="form-group">
+         <label for="pwd">AddressLine1:</label>
+         <input type="text" class="form-control" placeholder="AddressLine1" ngModel name="addressLine1"#addressLine1control="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="addressLine1control.touched"> Enter Address </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">AddressLine2:</label>
+         <input type="text" class="form-control" placeholder="AddressLine2" ngModel name="addressLine2">
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">City:</label>
+         <input type="text" class="form-control" placeholder="City" ngModel name="city"#citycontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="citycontrol.touched"> Enter City </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">State:</label>
+         <input type="text" class="form-control" placeholder="State" ngModel name="state"#statecontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="statecontrol.touched"> Enter State </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">PostalCode:</label>
+         <input type="number" class="form-control" placeholder="PostalCode" ngModel name="postalCode"#postalCodecontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="postalCodecontrol.touched"> Enter PostalCode </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">Country:</label>
+         <input type="text" class="form-control" placeholder="Country" ngModel name="country"#countrycontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="countrycontrol.touched"> Enter Country </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">Email:</label>
+         <input type="email" class="form-control" placeholder="Email" ngModel name="email"#emailcontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="emailcontrol.touched"> Enter Email </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">PhoneNumber:</label>
+         <input type="number" class="form-control" placeholder="PhoneNumber" ngModel name="phoneNumber"#phoneNumbercontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="phoneNumbercontrol.touched"> Enter PhoneNumber </span>
+       </div>
+
+       <div class="form-group">
+         <label for="pwd">Occupation:</label>
+         <input type="text" class="form-control" placeholder="Occupation" ngModel name="occupation"#occupationcontrol="ngModel" required autofocus>
+         <span  style="color:red" *ngIf="occupationcontrol.touched"> Enter Occupation </span>
+       </div>
+
+       <button type="submit" class="btn btn-primary">submit</button>
+
+
+
+ 
+
+     
+ 
+ 
+</form>

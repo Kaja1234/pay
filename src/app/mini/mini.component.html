@@ -1,0 +1,25 @@
+<br>
+
+<div style="text-align: center;">
+        <h3>MiniStatement</h3>
+</div>
+
+
+<table class="table table-info  col-md-6">
+  <tr>     <th>TransactionId</th>   
+    
+             <th>TransactionType</th>   
+             
+              
+             
+             <th>Amount</th> </tr>
+  <tr *ngFor="let statement of statementList">
+          <td>{{statement.transactionId}}</td>         
+          
+          <td>{{statement.transactionType}}</td>        
+          
+                 
+          
+          <td>{{statement.amount}}</td>
+  </tr>
+  </table>

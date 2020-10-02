@@ -1,0 +1,184 @@
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+          <img src="assets/Welcome.png" alt="LOGO" width="100">
+        </a>
+        <h1 style="color: aliceblue;">MONEYPE</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()"routerLink="/menu">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link"   *ngIf="loginservice.isUserLoggedIn()"  routerLink="/menu">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"   *ngIf="loginservice.isUserLoggedIn()"  routerLink="/about">ABOUT US</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link"    *ngIf="loginservice.isUserLoggedIn()" routerLink="/contact">CONTACT US</a>
+        </li>
+
+
+
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf="!loginservice.isUserLoggedIn()"  routerLink="/login">LOGIN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loginservice.isUserLoggedIn()||loginservice.isAdminLoggedIn()" routerLink="/logout">LOGOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!loginservice.isUserLoggedIn()" routerLink="/register">REGISTER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf= "loginservice.isAdminLoggedIn()" routerLink="/admin">AdminServices</a>
+        </li>
+    
+        <li class="nav-item">
+          <a class="nav-link" *ngIf= "!(loginservice.isUserLoggedIn()||loginservice.isAdminLoggedIn())" routerLink="/login1">ADMIN</a>
+        </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/b11.jpg" alt="Los Angeles" width="1300" height="250">
+      <div class="carousel-caption">
+        <h1>Welcome to MoneyPe</h1>
+        <p>We had such a great time in LA!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="assets/c4.jpg" alt="Chicago" width="1300" height="250">
+      <div class="carousel-caption">
+        <h1>Welcome to MoneyPe</h1>
+        <p>Thank you, Chicago!</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="assets/c1.webp" alt="New York" width="1300" height="250">
+      <div class="carousel-caption">
+        <h1>Welcome to MoneyPe</h1>
+        <p>We love the Big Apple!</p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<!-- Page Content -->
+ 
+
+
+<!--  Bank image -->
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+<!--<footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+  <style>
+    #footer {
+   position:fixed bottom;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   
+}
+  </style>
+        <!--<div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+              <div class="pr-xl-4">
+                <p>We are an award-winning service agency, dedicated to the best result in providing all bank services</p>
+                
+                <p class="rights"><span>dxc </span><span class="copyright-year">2020</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>798 South Park Avenue, Jaipur, Raj</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#">moneype@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd><a href="tel:#">https://karosearch.com</a> <span>or</span> <a href="tel:#">https://karosearch.com</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h4 class="text-center">Copyrights 2020|Moneype.All Rights Reserved</h4>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="https://facebook.com/"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+          <div class="col"><a class="social-inner" href="https://instagram.com/"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="https://twitter.com/"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+          <div class="col"><a class="social-inner" href="https://google.com/"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+        </div>
+      </footer>-->
+   <!--   <footer      class="fixed">
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">All Rights are Reserved CopyRight  ©MoneyPe 2020</nav>
+        
+  
+  </footer>-->
+
+  <footer class="col-md-12 text-center bg-dark text-white p-4 ">
+    @copyright reserved 2020, MoneyPe India Pvt Ltd
+</footer>
+    

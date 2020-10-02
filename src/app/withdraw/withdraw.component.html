@@ -1,0 +1,37 @@
+<br>
+<div style="text-align: center;">
+    <h3>Money Withdraw</h3>
+  </div>
+  
+   <!---->
+  
+  <form class="col-xl-4 col-md-6 mb-4" #addform="ngForm"   (ngSubmit)="moneyWithdraw(addform.value)">
+    <div class="form-group">
+      
+      <label for="acno">Account Number:</label>
+    <input type="number" class="form-control" name="accountNumber"  ngModel placeholder="Enter your A/C No"  #accountcontrol="ngModel" required autofocus>
+    <span  style="color:red" *ngIf="accountcontrol.touched"> Enter 12 digits card number </span>
+  </div>
+ 
+  <div class="form-group">
+    <label for="pwd">BankIFSC Code:</label>
+    <input type="text" class="form-control" name="bankIFSC"  ngModel placeholder="Enter your IFSC Code"  #ifsccontrol="ngModel" required autofocus>
+    <span  style="color:red" *ngIf="ifsccontrol.touched"> Enter Bank IFSC code </span>
+  </div>
+
+
+  <div class="form-group">
+    <label for="pwd">AccountHolder Name:</label>
+    <input type="text" class="form-control" name="accountHolder"  ngModel placeholder="Enter The Account Holder Name" #accountholdercontrol="ngModel" required autofocus>
+    <span  style="color:red" *ngIf="accountholdercontrol.touched"> Enter Account holder name </span>
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Amount:</label>
+    <input type="number" class="form-control" name="amount"  ngModel placeholder="Enter Amount to deposit" #amountcontrol="ngModel" required autofocus>
+    <span  style="color:red" *ngIf="amountcontrol.untouched"> Amount Should be greterthan 0 </span>
+  </div>
+     
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

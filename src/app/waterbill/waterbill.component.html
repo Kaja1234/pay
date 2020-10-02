@@ -1,0 +1,23 @@
+<br>
+<div style="text-align: center;">
+  <h3>Water Bill Amount</h3>
+</div>
+
+
+<form class="col-xl-4 col-md-6 mb-4"    #addform="ngForm"   (ngSubmit)="waterBill(addform.value)">
+    <div class="form-group">
+      <label for="canNumber">Enter water can  Number:</label>
+      <input type="number" class="form-control" placeholder="Enter water can Number" ngModel name="canNumber"#waterbillcontrol="ngModel" required autofocus >
+      <span  style="color:red" *ngIf="waterbillcontrol.touched"> Enter 10 digits  can number </span>
+    </div>
+     <div class="form-group">
+      <label for="pwd">Enter Amount:</label>
+      <input type="number" class="form-control" placeholder="Amount" ngModel name="amount" #amountcontrol="ngModel" required autofocus>
+      <span  style="color:red" *ngIf="amountcontrol.untouched"> Amount Should be greterthan 0 </span>
+     
+    </div>
+
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

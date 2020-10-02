@@ -1,0 +1,16 @@
+<form class="col-xl-4 col-md-6 mb-4" #addform="ngForm"   (ngSubmit)="electricBill(addform.value)">
+    
+  <div class="form-group">
+      <label for="serviceNumber">Enter Service Number:</label>
+      <input type="number" class="form-control" placeholder="Enter Service Number" ngModel name="serviceNumber" #ebillcontrol="ngModel" required autofocus>
+      <span  style="color:red" *ngIf="ebillcontrol.touched"> Enter 10 digits card number </span>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Enter Amount:</label>
+      <input type="number" class="form-control" placeholder="Amount" ngModel name="amount" #amountcontrol="ngModel" required autofocus>
+      <span  style="color:red" *ngIf="amountcontrol.untouched"> Amount Should be greterthan 0 </span>
+     
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

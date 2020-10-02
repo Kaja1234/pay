@@ -1,0 +1,31 @@
+<br>
+<div style="text-align: center;">
+       <h3>Check Balance</h3> 
+
+      
+
+      </div>
+    
+      <table class="table table-info  col-md-6">
+        <tr>     <th>AccountNumber</th>   
+          
+                   <th>BankIFSC</th>   
+
+                   <th>AccountHolder</th>
+                   
+                    
+                   
+                   <th>Amount</th> </tr>
+        <tr *ngFor="let statement1 of statementList">
+                <td>{{statement1.accountNumber}}</td>         
+                
+                <td>{{statement1.bankIFSC}}</td>   
+                
+                <td>{{statement1.accountHolder}}</td>
+                
+                       
+                
+                <td>{{statement1.amount}}</td>
+        </tr>
+        </table>
+
